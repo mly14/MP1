@@ -7,8 +7,8 @@ body {
 
 .popup-title {
   font-weight: 900;
-  background-color: rgb(208, 58, 138);
-  color: white;
+  background-color: rgb(254, 255, 203);
+  color: black;
   width: 100%;
   padding: 5px;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .popup-content {
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 5px;
 }
 
