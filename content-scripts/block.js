@@ -20,9 +20,14 @@ function addBlock() {
   deleteButton.innerText = "remove";
   deleteButton.addEventListener("click", deleteParent);
 
+
+
   // Add the delete button and drag handle to the block
   block.appendChild(deleteButton);
   block.appendChild(dragButton);
+
+  const textArea = document.createElement("textarea");
+  block.appendChild(textArea);
 
   // Add the block to the block container
   document.body.appendChild(block);
