@@ -44,8 +44,8 @@
 
 button {
   display: none;
-  border: 2px solid black;
-
+  border: 1px solid black;
+  float: left;
 }
 
 .textArea {
@@ -54,4 +54,9 @@ button {
   background-color: rgb(254, 255, 203);
   resize: none;
   box-shadow: 2px 2px 5px gray;
+  outline: none;
+}
+
+.buttonBlock {
+
 }

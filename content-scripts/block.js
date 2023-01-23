@@ -1,18 +1,19 @@
 let showBlocks = true;
 
 // Create a block container div and append it to the document
-const blockContainer = document.createElement("div");
-blockContainer.classList.add("blockContainer");
-document.body.appendChild(blockContainer);
+// const blockContainer = document.createElement("div");
+// blockContainer.classList.add("blockContainer");
+// document.body.appendChild(blockContainer);
 
 function addBlock() {
   // Create a div for the block
   const block = document.createElement("div");
   block.classList.add("blocker-block");
 
-  // Create the drag handle
+  // Create the drag button
   const dragButton = document.createElement("button");
   dragButton.innerText = "drag";
+  // dragButton.innerHTML = '<img src="images/favicon-32.png" />';
   makeDraggable(dragButton);
 
   // Create the delete button
@@ -20,11 +21,15 @@ function addBlock() {
   deleteButton.innerText = "remove";
   deleteButton.addEventListener("click", deleteParent);
 
-
+  const buttonBlock = document.createElement("div");
+  buttonBlock.classList.add("buttonBlock");
+  buttonBlock.appendChild(deleteButton);
+  buttonBlock.appendChild(dragButton);
+  block.appendChild(buttonBlock);
 
   // Add the delete button and drag handle to the block
-  block.appendChild(deleteButton);
-  block.appendChild(dragButton);
+  // block.appendChild(deleteButton);
+  // block.appendChild(dragButton);
 
   const textArea = document.createElement("textarea");
   textArea.setAttribute("id", "userInput")
@@ -41,12 +46,12 @@ function addBlock() {
 }
 
 function deleteParent(e) {
-  e.target.parentNode.remove();
+  e.target.parentNode.parentNode.remove();
 }
 
 function makeDraggable(el) {
   el.addEventListener("mousedown", function (e) {
-    const parentBlock = el.parentNode;
+    const parentBlock = el.parentNode.parentNode;
     console.log(parentBlock);
     var offsetX =
       e.clientX - parseInt(window.getComputedStyle(parentBlock).left);
