@@ -21,7 +21,7 @@
 }
 
 .blocker-block:hover * {
-  display: ;
+  display: block;
 }
 
 .blocker-block:hover {
@@ -43,5 +43,5 @@
 }
 
 button {
-  /* display: none; */
+  display: none;
 }

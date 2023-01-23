@@ -14,18 +14,15 @@ function addBlock() {
   const dragButton = document.createElement("button");
   dragButton.innerText = "drag";
   makeDraggable(dragButton);
-  block.appendChild(dragButton);
 
   // Create the delete button
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "remove";
   deleteButton.addEventListener("click", deleteParent);
-  block.appendChild(deleteButton);
 
-  // create textarea
-  const inputField = document.createElement("textarea");
-  inputField.setAttribute("id", "text")
-  block.appendChild(inputField);
+  // Add the delete button and drag handle to the block
+  block.appendChild(deleteButton);
+  block.appendChild(dragButton);
 
   // Add the block to the block container
   document.body.appendChild(block);
@@ -34,10 +31,6 @@ function addBlock() {
 function deleteParent(e) {
   e.target.parentNode.remove();
 }
-
-// $( function() {
-//   $( "#draggable" ).draggable();
-// } );
 
 function makeDraggable(el) {
   el.addEventListener("mousedown", function (e) {
