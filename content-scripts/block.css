@@ -44,4 +44,12 @@
 
 button {
   display: none;
+  border: 2px solid black;
+
+}
+
+textarea {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(254, 255, 203);
 }
