@@ -27,10 +27,17 @@ function addBlock() {
   block.appendChild(dragButton);
 
   const textArea = document.createElement("textarea");
+  textArea.setAttribute("id", "userInput")
+  textArea.classList.add("textArea");
+
   block.appendChild(textArea);
 
   // Add the block to the block container
   document.body.appendChild(block);
+  // setTimeout(function() {
+  //   document.getElementById("elementId").focus();
+  // }, 0);
+  console.log("here");
 }
 
 function deleteParent(e) {
@@ -40,6 +47,7 @@ function deleteParent(e) {
 function makeDraggable(el) {
   el.addEventListener("mousedown", function (e) {
     const parentBlock = el.parentNode;
+    console.log(parentBlock);
     var offsetX =
       e.clientX - parseInt(window.getComputedStyle(parentBlock).left);
     var offsetY =

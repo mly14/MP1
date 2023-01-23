@@ -9,14 +9,14 @@
   position: absolute;
   top: calc(50vh - 150px);
   left: calc(50vw - 150px);
-  height: 300px;
-  width: 300px;
+  height: 290px;
+  width: 160px;
 
   /* Set color to inherit from container */
-  background-color: inherit;
+  /* opacity: 0.5; */
 
   /* Make it resizable */
-  resize: both;
+  /* resize: both; */
   overflow: auto;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .blocker-block:hover {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 .invisible {
@@ -39,7 +39,7 @@
   z-index: 1000000000;
 
   /* Inherit background color so blocks can also inherit */
-  background-color: inherit;
+  opacity: 0;
 }
 
 button {
@@ -48,8 +48,9 @@ button {
 
 }
 
-textarea {
+.textArea {
   width: 150px;
   height: 150px;
   background-color: rgb(254, 255, 203);
+  resize: none;
 }
