@@ -13,7 +13,7 @@ function addBlock() {
   // Create the drag button
   const dragButton = document.createElement("button");
   dragButton.innerText = "drag";
-  // dragButton.innerHTML = '<img src="images/favicon-32.png" />';
+  dragButton.setAttribute("id", "dragButton")
   makeDraggable(dragButton);
 
   // Create the delete button
@@ -37,12 +37,10 @@ function addBlock() {
 
   block.appendChild(textArea);
 
+
+
   // Add the block to the block container
   document.body.appendChild(block);
-  // setTimeout(function() {
-  //   document.getElementById("elementId").focus();
-  // }, 0);
-  console.log("here");
 }
 
 function deleteParent(e) {
@@ -73,13 +71,13 @@ function makeDraggable(el) {
   });
 }
 
-function renderBlocks() {
-  if (showBlocks) {
-    blockContainer.classList.remove("invisible");
-  } else {
-    blockContainer.classList.add("invisible");
-  }
-}
+// function renderBlocks() {
+//   if (showBlocks) {
+//     blockContainer.classList.remove("invisible");
+//   } else {
+//     blockContainer.classList.add("invisible");
+//   }
+// }
 
 // Add a message listener that sets the value of "replace"
 chrome.runtime.onMessage.addListener((request) => {
